@@ -1,11 +1,11 @@
 // Service Worker for Video Streaming PWA
 const CACHE_NAME = 'video-stream-pwa-v1';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/app.js',
-  '/manifest.json',
-  '/style.css'
+  '/file-sys-test/',
+  '/file-sys-test/index.html',
+  '/file-sys-test/app.js',
+  '/file-sys-test/manifest.json',
+  '/file-sys-test/style.css'
 ];
 
 // Install event - cache static assets
@@ -77,6 +77,6 @@ self.addEventListener('fetch', event => {
 
 // Helper function to check if a request is for a video file
 function isVideoRequest(url) {
-  const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.mkv'];
+  const videoExtensions = ['.m4b','.mp3','.mp4', '.webm', '.ogg', '.mov', '.mkv'];
   return videoExtensions.some(ext => url.toLowerCase().endsWith(ext));
 }

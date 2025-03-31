@@ -2,7 +2,7 @@
   "name": "Video Stream PWA",
   "short_name": "VideoStream",
   "description": "Stream videos from your device storage",
-  "start_url": "/",
+  "start_url": "/file-sys-test/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0078d7",

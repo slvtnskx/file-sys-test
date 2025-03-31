@@ -151,7 +151,7 @@ class FileSystemHandler {
 
   // Check if a file is a video based on its extension
   isVideoFile(filename) {
-    const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.mkv'];
+    const videoExtensions = ['.m4b', '.mp3','.mp4', '.webm', '.ogg', '.mov', '.mkv'];
     return videoExtensions.some(ext => filename.toLowerCase().endsWith(ext));
   }
 
@@ -283,6 +283,8 @@ class FileSystemHandler {
     const extension = filename.toLowerCase().split('.').pop();
     
     const mimeTypes = {
+      'm4b': 'audio/mp4; codecs="mp4a.40.2"', 
+      'mp3': 'audio/mpeg; codecs="mp3"', 
       'mp4': 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"',
       'webm': 'video/webm; codecs="vp8, vorbis"',
       'ogg': 'video/ogg; codecs="theora, vorbis"',

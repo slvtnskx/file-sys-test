@@ -81,7 +81,7 @@
     }
   </style>
   <!-- Register service worker for PWA functionality -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/file-sys-test/manifest.json">
 </head>
 <body>
   <div id="app">
@@ -93,12 +93,12 @@
     <button id="directory-button">Select Video Directory</button>
   </div>
   
-  <script src="app.js"></script>
+  <script src="/file-sys-test/app.js"></script>
   <script>
     // Register service worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
+        navigator.serviceWorker.register('/file-sys-test/service-worker.js')
           .then(registration => {
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
           })
